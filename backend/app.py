@@ -135,6 +135,9 @@ def setup_database():
         db.close()
 
 
+# Initialize database when the app starts (including Gunicorn)
+setup_database()
+
 def get_db():
     """SessionLocal generator helper."""
     db = SessionLocal()
